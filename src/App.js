@@ -6,17 +6,19 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from './Components/home';
+import Home from './Components/Home';
+import AppBar from './Components/AppBar'
 
 function App() {
   return (
     <div className="App">
+      
+      <AppBar />
+      
       <Router>
-      <div>
         <Routes>
           <Route exact path='/' element={<Home/>} />
         </Routes>
-      </div>
     </Router>
     </div>
   );
