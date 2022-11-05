@@ -1,0 +1,17 @@
+.pie-chart-label {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 25px;
+  width: 100%;
+  align-items: center;
+
+  .label-color {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .label {
+  }
+}

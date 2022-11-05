@@ -1,0 +1,32 @@
+.summary {
+
+  .pie-chart-container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 30% auto;
+    grid-template-areas: "a b";
+    margin-top: 20px;
+
+    .labels {
+      grid-area: a;
+      display: flex;
+      flex-direction: column;
+
+      margin: 10px;
+    }
+
+    .pie-chart {
+      grid-area: b;
+
+      margin: 5px;
+    }
+  }
+
+  .title {
+    width: 100%;
+    height: 40px;
+
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}

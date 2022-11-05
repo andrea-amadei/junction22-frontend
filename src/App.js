@@ -9,6 +9,7 @@ import {
 import HomePage from './pages/HomePage';
 import AppBar from './components/AppBar'
 import JournalPage from "./pages/JournalPage";
+import SummaryPage from "./pages/SummaryPage";
 
 function App() {
   return (
@@ -17,12 +18,14 @@ function App() {
         <AppBar tabs={[
           {name: "Today", path: "/"},
           {name: "Journal", path: "/journal"},
-          {name: "Summary", path: "/summary"}
+          {name: "Summary", path: "/summary/topics"}
         ]}/>
         
         <Routes>
           <Route exact path='/' element={<HomePage/>} />
           <Route exact path='/journal' element={<JournalPage />} />
+          <Route exact path='/summary/topics' element={<SummaryPage tab="topics" />} />
+          <Route exact path='/summary/emotions' element={<SummaryPage tab="emotions" />} />
         </Routes>
     </Router>
     </div>
