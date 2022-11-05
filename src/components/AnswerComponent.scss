@@ -1,0 +1,15 @@
+.answer {
+  display: block;
+  width: 100%;
+  text-align: right;
+
+  padding-left: 15%;
+  padding-right: 20px;
+  font-size: 1.5em;
+}
+
+.answer-container {
+  &:hover {
+    background-color: transparentize(black, 0.9);
+  }
+}

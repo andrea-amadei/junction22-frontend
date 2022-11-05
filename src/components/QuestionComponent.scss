@@ -1,0 +1,23 @@
+.question-timestamp {
+  font-size: 1.3em;
+  padding-left: 20px;
+  padding-bottom: -20px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  min-height: 40px;
+  width: 100%;
+  text-align: left;
+
+  margin-top: 5px;
+  padding-left: 20px;
+  padding-right: 15%;
+}
+
+.question-container {
+  &:hover {
+    background-color: transparentize(black, 0.9);
+  }
+}

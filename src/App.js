@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -6,38 +6,23 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from './Components/Home';
-import AppBar from './Components/AppBar'
-
-import Image from './Components/images/back.jpg';
-
-const backStyles = {
-    paperContainer: {
-        height: '100vh',
-        backgroundImage: `url(${Image})`,
-        backgroundPosition: 'right-bottom',
-        width: '100vw',
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: 'rgb(250, 245, 235)',
-        color: 'rgb(39,39,39',
-        backgroundRepeat: 'repeat',
-        bottom: '0px',
-        right: '0px',
-        margin: '0px',
-        alignItems: 'center',
-    }
-};
+import HomePage from './pages/HomePage';
+import AppBar from './components/AppBar'
+import JournalPage from "./pages/JournalPage";
 
 function App() {
   return (
-    <div className="App" style={backStyles.paperContainer}>
-      
-      <AppBar />
-      
+    <div className="app">
       <Router>
+        <AppBar tabs={[
+          {name: "Today", path: "/"},
+          {name: "Journal", path: "/journal"},
+          {name: "Summary", path: "/summary"}
+        ]}/>
+        
         <Routes>
-          <Route exact path='/' element={<Home/>} />
+          <Route exact path='/' element={<HomePage/>} />
+          <Route exact path='/journal' element={<JournalPage />} />
         </Routes>
     </Router>
     </div>
