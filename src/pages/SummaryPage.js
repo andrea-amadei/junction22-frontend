@@ -48,7 +48,7 @@ export default function SummaryPage({ tab }) {
                 <div className="labels">
                   {
                     Object.entries(topicPalette).map(x =>
-                      <PieChartLabelComponent label={capitalizeFirstLetter(x[0])} color={x[1]}/>
+                      <PieChartLabelComponent label={capitalizeFirstLetter(x[0])} color={x[1]} key={x[0]} />
                     )
                   }
                 </div>
