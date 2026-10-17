@@ -18,6 +18,11 @@
 .env.test.local
 .env.production.local
 
+# Never commit local credentials or authentication tokens.
+.env
+.env.*
+!.env.example
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

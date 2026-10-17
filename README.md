@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## API authentication
+
+The historical hard-coded authorization token has been removed from the code and
+rewritten branch history. No API token is supplied by default. Protected API
+requests require a real runtime sign-in/token flow before the app can use them;
+do not restore a shared token in `src/index.js`.
+
+Do not commit access tokens or credentials, including in `.env` files. Build-time
+`REACT_APP_*` values are included in the browser bundle and are not secret storage.
+Any previously exposed token should be revoked or rotated independently of this
+repository cleanup.
+
 ## Available Scripts
 
 In the project directory, you can run:

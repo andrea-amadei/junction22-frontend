@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 export const requestHeader = {
-  'Content-Type': 'application/json',
-  'Authorization': '[REMOVED]'
+  'Content-Type': 'application/json'
 }
 
 export const userId = 1;
